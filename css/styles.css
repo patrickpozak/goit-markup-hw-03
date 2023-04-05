@@ -20,6 +20,39 @@ body {
   color: var(--text-color-1);
 }
 
+/* ZEROWANIE MARGINESÓW, PADDINGÓW, OUTLINÓW I BORDERÓW DLA H1-H6 ORAZ DLA p i ul */
+h1 {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
 .logotext {
   color: var(--text-color-4);
   text-decoration: none;
