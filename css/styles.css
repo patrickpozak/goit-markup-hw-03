@@ -1,3 +1,5 @@
+/* ================================================================================== */
+/* USTAWIENIE ZMIENNYCH ORAZ GLOBALA DLA ZAWARTOŚCI - BODY */
 :root {
   --primary-color: #ffffff;
   --secondary-color: #f5f4fa;
@@ -19,7 +21,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--text-color-1);
 }
-
+/* ================================================================================== */
 /* ZEROWANIE MARGINESÓW, PADDINGÓW, OUTLINÓW I BORDERÓW DLA H1-H6 ORAZ DLA p i ul */
 h1 {
   margin: 0;
@@ -52,7 +54,30 @@ ul {
   outline: 0;
   border: 0;
 }
+/* =================================================================================== */
+/* STYLE DLA .CONTAINER */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* =================================================================================== */
+/* STYLE DLA .SECTION */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
+/* =================================================================================== */
+/* SECTION HEADER */
+.top-container {
+  background: var(--primary-color);
+  border-bottom: 1px solid var(--line-color);
+}
+.header-content {
+  display: flex;
+}
+
+/* LOGO */
 .logotext {
   color: var(--text-color-4);
   text-decoration: none;
@@ -61,8 +86,11 @@ ul {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
-
   letter-spacing: 0.03em;
+
+  margin-top: 24px;
+  margin-left: 215px;
+  padding-bottom: 25px;
 }
 .logotext:hover {
   color: var(--text-color-4);
@@ -90,14 +118,16 @@ ul {
 .logotext:focus .logo-footer-second-word {
   color: var(--text-color-4);
 }
-
-.top-container {
-  background: var(--primary-color);
-  border-bottom: 1px solid var(--line-color);
+/* MENU NAWIGACYJNE */
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .menu-items {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 .menu-items .m-item {
   font-weight: 500;
@@ -106,6 +136,8 @@ ul {
   letter-spacing: 0.02em;
   color: var(--text-color-1);
   text-decoration: none;
+  margin-top: 32px;
+  padding-bottom: 32px;
 }
 
 .menu-items .m-item:hover {
@@ -116,7 +148,7 @@ ul {
   color: var(--text-color-4);
   outline: none;
 }
-
+/* MAIL I TELEFON */
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -134,6 +166,8 @@ ul {
   text-decoration: none;
   outline: none;
 }
+/* =================================================================================== */
+/* SECTION FOOTER */
 
 .bottom-container {
   background: var(--tertiary-color);
