@@ -23,31 +23,11 @@ body {
 }
 /* ================================================================================== */
 /* ZEROWANIE MARGINESÓW, PADDINGÓW, OUTLINÓW I BORDERÓW DLA H1-H6 ORAZ DLA p i ul */
-h1 {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-h2 {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-h3 {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
-}
-
+h1,
+h2,
+h3,
+h4,
+p,
 ul {
   margin: 0;
   padding: 0;
@@ -57,8 +37,10 @@ ul {
 /* =================================================================================== */
 /* STYLE DLA .CONTAINER */
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 /* =================================================================================== */
 /* STYLE DLA .SECTION */
@@ -75,6 +57,10 @@ ul {
 }
 .header-content {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 /* LOGO */
@@ -87,10 +73,8 @@ ul {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-
-  margin-top: 24px;
-  margin-left: 215px;
-  padding-bottom: 25px;
+  margin-right: 93px;
+  flex-grow: 0;
 }
 .logotext:hover {
   color: var(--text-color-4);
@@ -119,36 +103,42 @@ ul {
   color: var(--text-color-4);
 }
 /* MENU NAWIGACYJNE */
-.menu-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.menu-items {
+
+.menu-list {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  gap: 46px;
 }
-.menu-items .m-item {
+
+.menu-list .m-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143px;
   letter-spacing: 0.02em;
   color: var(--text-color-1);
   text-decoration: none;
-  margin-top: 32px;
-  padding-bottom: 32px;
 }
 
-.menu-items .m-item:hover {
+.menu-list .m-item:hover {
   color: var(--text-color-4);
 }
 
-.menu-items .m-item:focus {
+.menu-list .m-item:focus {
   color: var(--text-color-4);
   outline: none;
 }
 /* MAIL I TELEFON */
+.header-contact-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 2;
+  gap: 50px;
+}
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -167,24 +157,163 @@ ul {
   outline: none;
 }
 /* =================================================================================== */
+/* MAIN SECTION */
+.main-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  gap: 30px;
+}
+.header-primary {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-color-3);
+  max-width: 696px;
+}
+.order-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+  background: var(--quaternary-color);
+  color: var(--text-color-3);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  max-width: 200px;
+  padding: 10px 41px;
+}
+.main-section-container {
+  background: var(--tertiary-color);
+}
+/* =================================================================================== */
+/* MIDDLE SECTION */
+.middle-section-container {
+  background: var(--primary-color);
+}
+.middle-section-content {
+  display: flex;
+  align-items: center;
+  padding-bottom: 94px;
+}
+.descriptions {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-tertiary {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.text-container {
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  color: var(--text-color-2);
+}
+/* =================================================================================== */
+.photo-content {
+  display: flex;
+  gap: 30px;
+}
+.header-secondary {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 50px;
+}
+/* =================================================================================== */
+/* THIRD SECTION */
+.third-section-container {
+  background: var(--secondary-color);
+}
+.team-content {
+  display: flex;
+  gap: 30px;
+}
+.personality-box {
+  margin: 0;
+  background: var(--primary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.person-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.187;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 10px;
+}
+.job-name {
+  font-size: 16px;
+  line-height: 1.187;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 30px 0;
+}
+
+/* =================================================================================== */
 /* SECTION FOOTER */
 
 .bottom-container {
   background: var(--tertiary-color);
 }
-
-.footer-link-portfolio {
-  color: var(--text-color-6);
-  font-size: 14px;
-  line-height: 1.714;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.footer-link-portfolio:hover {
+.footer-logotext {
   color: var(--text-color-4);
   text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  padding-bottom: 20px;
 }
-.footer-link-portfolio:focus {
+.footer-contact {
+  font-style: normal;
+  color: var(--text-color-3);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.contact-address {
+  font-size: 14px;
+  line-height: 1.714;
+
+  letter-spacing: 0.03em;
+}
+.contact-address:hover {
   color: var(--text-color-4);
-  outline: none;
+}
+.contact-address:focus {
+  color: var(--text-color-4);
 }
 
 .footer-link {
@@ -201,22 +330,22 @@ ul {
   outline: none;
 }
 
-.footer-contact {
-  font-style: normal;
-  color: var(--text-color-3);
-}
-.contact-address {
+.footer-link-portfolio {
+  color: var(--text-color-6);
   font-size: 14px;
   line-height: 1.714;
+}
+.footer-link-portfolio:hover {
+  color: var(--text-color-4);
+  text-decoration: none;
+}
+.footer-link-portfolio:focus {
+  color: var(--text-color-4);
+  outline: none;
+}
 
-  letter-spacing: 0.03em;
-}
-.contact-address:hover {
-  color: var(--text-color-4);
-}
-.contact-address:focus {
-  color: var(--text-color-4);
-}
+/* =================================================================================== */
+/* PORTFOLIO - BUTTON SECTION */
 
 .button-list {
   list-style-type: none;
@@ -248,81 +377,6 @@ ul {
   border-radius: 4px;
 }
 
-.order-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-
-  letter-spacing: 0.06em;
-  background: var(--quaternary-color);
-  color: var(--text-color-3);
-  border: none;
-  cursor: pointer;
-}
-.main-section-container {
-  background: var(--tertiary-color);
-}
-.middle-section-container {
-  background: var(--primary-color);
-}
-.header-primary {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-color-3);
-}
-.header-tertiary {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.text-container {
-  font-size: 14px;
-  line-height: 1.71;
-
-  letter-spacing: 0.03em;
-  color: var(--text-color-2);
-}
-.header-secondary {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.personality-box {
-  width: 270px;
-  height: 368px;
-
-  background: var(--primary-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.third-section-container {
-  background: var(--secondary-color);
-}
-.person-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.job-name {
-  font-size: 16px;
-  line-height: 1.187;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-}
 .portfolio-container {
   list-style-type: none;
 }
