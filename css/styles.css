@@ -93,15 +93,6 @@ ul {
   color: var(--text-color-4);
 }
 
-.logo-footer-second-word {
-  color: var(--text-color-3);
-}
-.logotext:hover .logo-footer-second-word {
-  color: var(--text-color-4);
-}
-.logotext:focus .logo-footer-second-word {
-  color: var(--text-color-4);
-}
 /* MENU NAWIGACYJNE */
 
 .menu-list {
@@ -295,6 +286,15 @@ ul {
   line-height: 1.192;
   letter-spacing: 0.03em;
   padding-bottom: 20px;
+}
+.logo-footer-second-word {
+  color: var(--text-color-3);
+}
+.footer-logotext:hover .logo-footer-second-word {
+  color: var(--text-color-4);
+}
+.footer-logotext:focus .logo-footer-second-word {
+  color: var(--text-color-4);
 }
 .footer-contact {
   font-style: normal;
