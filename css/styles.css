@@ -345,10 +345,19 @@ ul {
 }
 
 /* =================================================================================== */
-/* PORTFOLIO - BUTTON SECTION */
+/* PORTFOLIO - GRID SECTION */
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .button-list {
   list-style-type: none;
+  display: flex;
+  gap: 8px;
+  padding-bottom: 50px;
 }
 .button-list .button-item {
   background: var(--secondary-color);
@@ -361,6 +370,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
+  padding: 6px 22px;
 }
 .button-item:hover {
   background: var(--quaternary-color);
@@ -378,16 +388,21 @@ ul {
 }
 
 .portfolio-container {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+.grid-box {
+  flex-basis: calc((100% - 54px) / 3);
 }
 .portfolio-boxes {
-  box-sizing: border-box;
-
-  width: 370px;
-  height: 404px;
-
+  margin: 0;
   background: var(--primary-color);
   border: 1px solid #eeeeee;
+}
+.product-description {
+  padding: 20px 24px;
 }
 .product-name {
   font-weight: 700;
