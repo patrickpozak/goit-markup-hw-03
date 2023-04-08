@@ -68,14 +68,17 @@ ul {
   color: var(--text-color-4);
   text-decoration: none;
   font-family: "Raleway";
-  font-style: normal;
+
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
+}
+.logotext-header-add-on {
   margin-right: 93px;
   flex-grow: 0;
 }
+
 .logotext:hover {
   color: var(--text-color-4);
 }
@@ -86,9 +89,8 @@ ul {
 .logo-header-second-word {
   color: var(--text-color-5);
 }
-.logotext:hover .logo-header-second-word {
-  color: var(--text-color-4);
-}
+
+.logotext:hover .logo-header-second-word,
 .logotext:focus .logo-header-second-word {
   color: var(--text-color-4);
 }
@@ -133,7 +135,7 @@ ul {
 .header-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143px;
+  line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--text-color-2);
   text-decoration: none;
@@ -246,6 +248,9 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.personality-box img {
+  display: block;
+}
 .person-name {
   font-weight: 500;
   font-size: 16px;
@@ -276,24 +281,15 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-logotext {
-  color: var(--text-color-4);
-  text-decoration: none;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
-  letter-spacing: 0.03em;
+.logotext-footer-add-on {
   padding-bottom: 20px;
 }
 .logo-footer-second-word {
   color: var(--text-color-3);
 }
-.footer-logotext:hover .logo-footer-second-word {
-  color: var(--text-color-4);
-}
-.footer-logotext:focus .logo-footer-second-word {
+
+.logotext:hover .logo-footer-second-word,
+.logotext:focus .logo-footer-second-word {
   color: var(--text-color-4);
 }
 .footer-contact {
@@ -309,9 +305,8 @@ ul {
 
   letter-spacing: 0.03em;
 }
-.contact-address:hover {
-  color: var(--text-color-4);
-}
+
+.contact-address:hover,
 .contact-address:focus {
   color: var(--text-color-4);
 }
@@ -391,18 +386,20 @@ ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 27px;
+  gap: 30px;
 }
 .grid-box {
-  flex-basis: calc((100% - 54px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 .portfolio-boxes {
   margin: 0;
   background: var(--primary-color);
-  border: 1px solid #eeeeee;
 }
 .product-description {
   padding: 20px 24px;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #eeeeee;
 }
 .product-name {
   font-weight: 700;
