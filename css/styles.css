@@ -21,6 +21,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--text-color-1);
 }
+img {
+  display: block;
+}
+
 /* ================================================================================== */
 /* ZEROWANIE MARGINESÓW, PADDINGÓW, OUTLINÓW I BORDERÓW DLA H1-H6 ORAZ DLA p i ul */
 h1,
@@ -248,9 +252,7 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.personality-box img {
-  display: block;
-}
+
 .person-name {
   font-weight: 500;
   font-size: 16px;
@@ -397,9 +399,8 @@ ul {
 }
 .product-description {
   padding: 20px 24px;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 .product-name {
   font-weight: 700;
